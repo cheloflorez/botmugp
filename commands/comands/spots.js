@@ -51,7 +51,7 @@ module.exports = {
                 { name: 'Elemento', value: elemento, inline: true },
                 { name: 'Tipo', value: tipo, inline: true }
             )
-            .setFooter({ text: 'Powered by Chelo', iconURL: interaction.client.user.displayAvatarURL() })
+            .setFooter({ text: 'Powered by Chelossss', iconURL: interaction.client.user.displayAvatarURL() })
             .setTimestamp();
 
         if (fs.existsSync(filePath)) {
