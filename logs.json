@@ -1,0 +1,660 @@
+{
+  "logs": [
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Buscador Spots",
+      "input": {},
+      "timestamp": "2025-09-08T23:00:08.931Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Maze Helper",
+      "input": {},
+      "timestamp": "2025-09-08T23:00:19.499Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Info TCA",
+      "input": {},
+      "timestamp": "2025-09-08T23:00:21.842Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Info TCA",
+      "input": {},
+      "timestamp": "2025-09-08T23:00:24.134Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Calculadora de Nivel",
+      "input": {},
+      "timestamp": "2025-09-08T23:00:26.955Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Calculadora de Nivel",
+      "input": {},
+      "timestamp": "2025-09-08T23:00:29.135Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Buscador Spots",
+      "input": {},
+      "timestamp": "2025-09-08T23:20:05.062Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Info TCA",
+      "input": {},
+      "timestamp": "2025-09-08T23:20:07.454Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Maze Helper",
+      "input": {},
+      "timestamp": "2025-09-08T23:20:10.316Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Calculadora de Nivel",
+      "input": {},
+      "timestamp": "2025-09-08T23:39:03.915Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Calculadora de Nivel",
+      "input": {},
+      "timestamp": "2025-09-08T23:41:26.208Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Calculadora de Nivel",
+      "input": {},
+      "timestamp": "2025-09-08T23:43:55.225Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Calculadora de Tiempo",
+      "input": {},
+      "timestamp": "2025-09-08T23:45:10.408Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Calculadora de Nivel",
+      "input": {},
+      "timestamp": "2025-09-08T23:46:27.008Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Calculadora de Nivel",
+      "input": {},
+      "timestamp": "2025-09-08T23:46:49.023Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Calculadora de Tiempo",
+      "input": {},
+      "timestamp": "2025-09-08T23:47:01.276Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Buscador Spots",
+      "input": {},
+      "timestamp": "2025-09-09T00:31:45.146Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Buscador Spots",
+      "input": {},
+      "timestamp": "2025-09-09T00:33:19.403Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Buscador Spots",
+      "input": {},
+      "timestamp": "2025-09-09T00:34:36.049Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Buscador Spots",
+      "input": {},
+      "timestamp": "2025-09-09T02:57:23.797Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Buscador Spots",
+      "input": {},
+      "timestamp": "2025-09-09T03:11:17.644Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Buscador Spots",
+      "input": {},
+      "timestamp": "2025-09-09T03:37:44.103Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Maze Helper",
+      "input": {},
+      "timestamp": "2025-09-09T15:17:36.825Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Buscador Spots",
+      "input": {},
+      "timestamp": "2025-09-09T17:28:52.683Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Buscador Spots",
+      "input": {},
+      "timestamp": "2025-09-09T17:47:59.965Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Calculadora de Nivel",
+      "input": {},
+      "timestamp": "2025-09-09T21:53:47.219Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Maze Helper",
+      "input": {},
+      "timestamp": "2025-09-09T21:54:16.089Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Maze Helper",
+      "input": {},
+      "timestamp": "2025-09-09T22:05:46.321Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Calculadora de Nivel",
+      "input": {},
+      "timestamp": "2025-09-09T22:06:10.181Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Buscador Spots",
+      "input": {},
+      "timestamp": "2025-09-09T23:23:48.788Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Maze Helper",
+      "input": {},
+      "timestamp": "2025-09-09T23:24:16.300Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Buscador Spots",
+      "input": {},
+<<<<<<< HEAD
+      "timestamp": "2025-10-07T03:37:21.106Z"
+=======
+      "timestamp": "2025-09-10T01:01:48.822Z"
+>>>>>>> fca0e5e8a30619c65371730de35066af4eda9186
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Buscador Spots",
+      "input": {},
+<<<<<<< HEAD
+      "timestamp": "2025-10-07T03:37:51.119Z"
+=======
+      "timestamp": "2025-09-10T02:21:12.669Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Calculadora de Tiempo",
+      "input": {},
+      "timestamp": "2025-09-10T02:21:15.214Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Calculadora de Nivel",
+      "input": {},
+      "timestamp": "2025-09-10T02:21:17.287Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Info TCA",
+      "input": {},
+      "timestamp": "2025-09-10T02:21:19.795Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Info TCA",
+      "input": {},
+      "timestamp": "2025-09-10T02:23:01.665Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Info TCA",
+      "input": {},
+      "timestamp": "2025-09-10T02:23:49.794Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Info TCA",
+      "input": {},
+      "timestamp": "2025-09-10T02:24:29.662Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Info TCA",
+      "input": {},
+      "timestamp": "2025-09-10T02:26:08.680Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Info TCA",
+      "input": {},
+      "timestamp": "2025-09-10T02:26:57.873Z"
+>>>>>>> fca0e5e8a30619c65371730de35066af4eda9186
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Maze Helper",
+      "input": {},
+<<<<<<< HEAD
+      "timestamp": "2025-10-07T03:37:54.483Z"
+=======
+      "timestamp": "2025-09-10T02:27:51.765Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Info TCA",
+      "input": {},
+      "timestamp": "2025-09-10T02:37:00.685Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Info TCA",
+      "input": {},
+      "timestamp": "2025-09-10T02:37:35.400Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Info TCA",
+      "input": {},
+      "timestamp": "2025-09-10T02:38:38.012Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Info TCA",
+      "input": {},
+      "timestamp": "2025-09-10T02:38:55.975Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Info TCA",
+      "input": {},
+      "timestamp": "2025-09-10T02:39:26.026Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Buscador Spots",
+      "input": {},
+      "timestamp": "2025-09-10T03:45:11.139Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Buscador Spots",
+      "input": {},
+      "timestamp": "2025-09-10T03:47:15.846Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Buscador Spots",
+      "input": {},
+      "timestamp": "2025-09-10T04:02:50.252Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Buscador Spots",
+      "input": {},
+      "timestamp": "2025-09-10T04:39:03.745Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Buscador Spots",
+      "input": {},
+      "timestamp": "2025-09-10T04:42:20.617Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Buscador Spots",
+      "input": {},
+      "timestamp": "2025-09-10T04:50:37.708Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Buscador Spots",
+      "input": {},
+      "timestamp": "2025-09-10T04:53:40.315Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Buscador Spots",
+      "input": {},
+      "timestamp": "2025-09-10T04:56:18.264Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Buscador Spots",
+      "input": {},
+      "timestamp": "2025-09-10T04:56:26.489Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Buscador Spots",
+      "input": {},
+      "timestamp": "2025-09-10T04:57:22.402Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Buscador Spots",
+      "input": {},
+      "timestamp": "2025-09-10T06:12:46.543Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Buscador Spots",
+      "input": {},
+      "timestamp": "2025-09-10T06:47:45.717Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Buscador Spots",
+      "input": {},
+      "timestamp": "2025-09-10T07:08:42.502Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Buscador Spots",
+      "input": {},
+      "timestamp": "2025-09-10T07:13:18.941Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Buscador Spots",
+      "input": {},
+      "timestamp": "2025-09-10T17:15:24.745Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Buscador Spots",
+      "input": {},
+      "timestamp": "2025-09-10T19:48:33.104Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Buscador Spots",
+      "input": {},
+      "timestamp": "2025-09-10T19:51:27.676Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Buscador Spots",
+      "input": {},
+      "timestamp": "2025-09-10T19:52:42.791Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Buscador Spots",
+      "input": {},
+      "timestamp": "2025-09-10T20:09:00.278Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Buscador Spots",
+      "input": {},
+      "timestamp": "2025-09-10T20:09:16.472Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Buscador Spots",
+      "input": {},
+      "timestamp": "2025-09-10T20:12:38.450Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Buscador Spots",
+      "input": {},
+      "timestamp": "2025-09-13T20:19:40.648Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Calculadora de Nivel",
+      "input": {},
+      "timestamp": "2025-09-14T01:37:38.516Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Calculadora de Tiempo",
+      "input": {},
+      "timestamp": "2025-09-14T01:37:45.122Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Buscador Spots",
+      "input": {},
+      "timestamp": "2025-09-14T01:37:48.036Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Maze Helper",
+      "input": {},
+      "timestamp": "2025-09-14T01:38:12.005Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Info GAP",
+      "input": {},
+      "timestamp": "2025-09-14T01:38:33.775Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Info TCA",
+      "input": {},
+      "timestamp": "2025-09-14T01:38:41.015Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Calculadora de Nivel",
+      "input": {},
+      "timestamp": "2025-09-14T01:50:28.559Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Calculadora de Tiempo",
+      "input": {},
+      "timestamp": "2025-09-14T01:50:34.888Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Calculadora de Tiempo",
+      "input": {},
+      "timestamp": "2025-09-14T01:50:38.218Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Calculadora de Nivel",
+      "input": {},
+      "timestamp": "2025-09-14T01:50:43.810Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Calculadora de Tiempo",
+      "input": {},
+      "timestamp": "2025-09-14T01:50:53.787Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Calculadora de Nivel",
+      "input": {},
+      "timestamp": "2025-09-14T01:50:55.719Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Buscador Spots",
+      "input": {},
+      "timestamp": "2025-09-18T20:00:39.039Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Buscador Spots",
+      "input": {},
+      "timestamp": "2025-09-18T20:09:01.426Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Calculadora de Nivel",
+      "input": {},
+      "timestamp": "2025-09-19T13:11:25.095Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Calculadora de Tiempo",
+      "input": {},
+      "timestamp": "2025-09-19T13:11:31.773Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Buscador Spots",
+      "input": {},
+      "timestamp": "2025-09-19T13:11:34.740Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Maze Helper",
+      "input": {},
+      "timestamp": "2025-09-19T13:13:03.991Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Maze Helper",
+      "input": {},
+      "timestamp": "2025-09-19T13:13:08.916Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Maze Helper",
+      "input": {},
+      "timestamp": "2025-09-19T13:13:15.650Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Buscador Spots",
+      "input": {},
+      "timestamp": "2025-09-19T13:13:51.430Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Info GAP",
+      "input": {},
+      "timestamp": "2025-09-19T13:14:02.203Z"
+    },
+    {
+      "userId": "659591356305637389",
+      "username": "chelo1990",
+      "action": "Info TCA",
+      "input": {},
+      "timestamp": "2025-09-19T13:14:08.081Z"
+>>>>>>> fca0e5e8a30619c65371730de35066af4eda9186
+    }
+  ]
+}

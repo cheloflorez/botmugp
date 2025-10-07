@@ -1,0 +1,46 @@
+{
+  "123": {
+    "main": 123,
+    "sub": 123,
+    "images": {
+      "Tierra": "/data/spots/123/Tierra.png",
+      "Agua": "/data/spots/123/Agua.png",
+      "Fuego": "/data/spots/123/Fuego.png",
+      "Oscuridad": "/data/spots/123/Oscuridad.png",
+      "Viento": "/data/spots/123/Viento.png"
+    }
+  },
+  "SOD": {
+    "main": 9,
+    "sub": 7,
+    "images": {
+      "Tierra": "Tierra.png",
+      "Agua": "Agua.png",
+      "Fuego": "Fuego.png",
+      "Oscuridad": "Oscuridad.png",
+      "Viento": "Viento.png"
+    }
+  },
+  "asd": {
+    "main": 1,
+    "sub": 1,
+    "images": {
+      "Tierra": "Tierra.png",
+      "Agua": "Agua.png",
+      "Fuego": "Fuego.png",
+      "Oscuridad": "Oscuridad.png",
+      "Viento": "Viento.png"
+    }
+  },
+    "Kubera": {
+    "main": 1,
+    "sub": 1,
+    "images": {
+      "Tierra": "Tierra.png",
+      "Agua": "Agua.png",
+      "Fuego": "Fuego.png",
+      "Oscuridad": "Oscuridad.png",
+      "Viento": "Viento.png"
+    }
+  }
+}
