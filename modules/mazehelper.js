@@ -1,6 +1,7 @@
-const { EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, AttachmentBuilder , MessageFlags } = require('discord.js');
+const { EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, AttachmentBuilder, MessageFlags } = require('discord.js');
 const { createCanvas, loadImage } = require('canvas');
-const fs = require('fs');
+const fs = require('fs'); // Para funciones síncronas
+const fsPromises = require('fs').promises; // Para funciones asíncronas
 const path = require('path');
 const { makeFinalImage } = require('../utils/makeFinalImage');
 
@@ -11,6 +12,33 @@ const mazeConfig = {
     left: 5,
     right: 10
 };
+
+// Cache de imágenes cargadas
+const imageCache = new Map();
+const CACHE_TTL = 5 * 60 * 1000; // 5 minutos
+
+// Limpiar caché automáticamente
+setInterval(() => {
+    const now = Date.now();
+    for (const [key, value] of imageCache.entries()) {
+        if (now - value.timestamp > CACHE_TTL) {
+            imageCache.delete(key);
+        }
+    }
+}, CACHE_TTL);
+
+// Función para cargar imagen con caché
+async function getCachedImage(imagePath) {
+    const cached = imageCache.get(imagePath);
+    if (cached && (Date.now() - cached.timestamp) < CACHE_TTL) {
+        return cached.image;
+    }
+    
+    const image = await loadImage(imagePath);
+    imageCache.set(imagePath, { image, timestamp: Date.now() });
+    
+    return image;
+}
 
 // ------------------ BOTONES ------------------
 function makeDirectionRow() {
@@ -51,9 +79,10 @@ async function makeCollage(direction) {
     const count = mazeConfig[direction];
     if (!count) return null;
 
+    // Usar getCachedImage en lugar de loadImage directamente
     const imgs = await Promise.all(
         Array.from({ length: count }).map((_, idx) =>
-            loadImage(`./data/mazehelper/${direction}/${idx + 1}.png`)
+            getCachedImage(`./data/mazehelper/${direction}/${idx + 1}.png`)
         )
     );
 
@@ -126,6 +155,7 @@ async function handleImage(interaction, direction, idx) {
     if (!finalFile) return interaction.reply({ content: '⚠️ No se encontró la imagen final.', flags: MessageFlags.Ephemeral });
 
     const secondPath = `./data/mazehelper/${direction}/${idx}finalB.png`;
+    // Usar fs.existsSync (no fsPromises)
     const description = fs.existsSync(secondPath)
         ? '⚠️ Hay 2 opciones de caminos, elige una.'
         : 'Camino seleccionado';
@@ -168,7 +198,6 @@ async function handleBackSub(interaction, direction) {
         components: [makeNumberRow(direction), makeBackRow()]
     });
 }
-
 
 // ------------------ EXPORTS ------------------
 module.exports = {

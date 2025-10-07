@@ -1,18 +1,17 @@
-// utils/makeFinalImage.js
 const { createCanvas, loadImage } = require('canvas');
 const { AttachmentBuilder } = require('discord.js');
-const fs = require('fs');
+const fs = require('fs'); // Usar fs normal, NO fs.promises
 
 async function makeFinalImage(direction, idx) {
     const basePath = `./data/mazehelper/${direction}/${idx}finalA.png`;
     const secondPath = `./data/mazehelper/${direction}/${idx}finalB.png`;
 
+    // Usar fs.existsSync
     if (!fs.existsSync(basePath)) return null;
 
-    const gap = 20; // gap más grande
-    const borderWidth = 2; // borde más fino
+    const gap = 20;
+    const borderWidth = 2;
 
-    // Cargar imagen principal
     const img1 = await loadImage(basePath);
 
     // Caso 2: solo una imagen

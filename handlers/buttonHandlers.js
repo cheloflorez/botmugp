@@ -1,17 +1,52 @@
-const {MessageFlags} = require('discord.js')
+const { MessageFlags } = require('discord.js')
 const calculator = require('../modules/calculator');
 const calculatorTime = require('../modules/calculatortime');
 const spots = require('../modules/spots');
 const mazeHelper = require('../modules/mazehelper');
-const tca = require('../modules/tca'); // nuevo
-const gap = require('../modules/gap'); // nuevo
-
-
-const modules = [calculator, spots, mazeHelper];
+const tca = require('../modules/tca');
+const gap = require('../modules/gap');
+const rateLimiter = require('../utils/rateLimiter');
 
 module.exports = {
     async handleButton(interaction) {
         const id = interaction.customId;
+        const userId = interaction.user.id;
+        
+        // Botones que abren módulos (tienen cooldown)
+        const moduleOpenButtons = [
+            'open_levelcalc', 
+            'open_timecalc', 
+            'open_spots', 
+            'open_mazehelper', 
+            'open_tca', 
+            'open_gap'
+        ];
+        
+        // Si es un botón que abre un módulo, verificar cooldown
+        if (moduleOpenButtons.includes(id)) {
+            const check = rateLimiter.checkModuleOpen(userId, 10000); // 10 segundos
+            
+            if (!check.allowed) {
+                return interaction.reply({
+                    content: `⏳ Debes esperar ${check.timeToWait} segundos antes de abrir un módulo.`,
+                    flags: MessageFlags.Ephemeral
+                });
+            }
+        }
+        
+        // Protección global del servidor (solo para operaciones muy pesadas)
+        const heavyOperations = ['open_mazehelper', 'dir_', 'img_'];
+        const isHeavy = heavyOperations.some(op => id.startsWith(op));
+        
+        if (isHeavy) {
+            const globalLimit = rateLimiter.checkGlobal('heavy_operation', 50, 60000); // 50 operaciones por minuto
+            if (globalLimit.limited) {
+                return interaction.reply({
+                    content: '⚠️ El servidor está sobrecargado. Intenta en unos segundos.',
+                    flags: MessageFlags.Ephemeral
+                });
+            }
+        }
 
         // Botones principales
         const primaryButtons = {

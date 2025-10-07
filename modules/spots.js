@@ -1,15 +1,64 @@
 const { EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, StringSelectMenuBuilder, MessageFlags } = require('discord.js');
-const fs = require('fs');
+const fs = require('fs').promises;
+const fsSync = require('fs'); // Para existsSync que no tiene versión async
 const path = require('path');
 
-const spotSelections = new Map(); // key: userId, value: { mapa, elemento }
+const spotSelections = new Map();
+
+// Cache para configuración
+let configCache = null;
+let configLastLoad = 0;
+const CONFIG_TTL = 60000;
+
+// Limpiar selecciones viejas cada 5 minutos
+setInterval(() => {
+    const now = Date.now();
+    const maxAge = 10 * 60 * 1000; // 10 minutos
+    
+    for (const [userId, data] of spotSelections.entries()) {
+        if (!data.timestamp || (now - data.timestamp) > maxAge) {
+            spotSelections.delete(userId);
+        }
+    }
+}, 5 * 60 * 1000);
+
+// Leer configuración ASÍNCRONA con caché
+async function readSpotConfig() {
+    const now = Date.now();
+    if (configCache && (now - configLastLoad) < CONFIG_TTL) {
+        return configCache;
+    }
+
+    const configPath = path.join(__dirname, '..', 'data', 'spots', 'spotsConfig.json');
+    try {
+        const raw = await fs.readFile(configPath, 'utf8');
+        configCache = JSON.parse(raw);
+        configLastLoad = now;
+        return configCache;
+    } catch (error) {
+        console.error('Error reading spot config:', error);
+        // Retornar configuración por defecto si no existe el archivo
+        return {
+            SOD: { main: 9, sub: 7 },
+            ARENA: { main: 7, sub: 6 },
+            KANTURU: { main: 7, sub: 6 }
+            // Agrega más mapas aquí según necesites
+        };
+    }
+}
+
+// Obtener nombres de mapas ASÍNCRONO
+async function getMapas() {
+    const config = await readSpotConfig();
+    return Object.keys(config);
+}
 
 // ------------------ MENÚ INICIAL ------------------
 async function handleInteraction(interaction) {
-    const dataPath = path.join(__dirname, '..', 'data', 'spots');
-    const mapas = fs.readdirSync(dataPath).filter(file => fs.lstatSync(path.join(dataPath, file)).isDirectory());
-
-    if (mapas.length === 0) return interaction.reply({ content: '❌ No hay mapas disponibles.', flags: MessageFlags.Ephemeral });
+    const mapas = await getMapas();
+    if (mapas.length === 0) {
+        return interaction.reply({ content: '❌ No hay mapas configurados.', flags: MessageFlags.Ephemeral });
+    }
 
     const mapaSelect = new StringSelectMenuBuilder()
         .setCustomId('select_mapa')
@@ -49,7 +98,9 @@ async function handleInteraction(interaction) {
 async function handleSearch(interaction, selectedMapa, selectedElemento) {
     const filePath = path.join(__dirname, '..', 'data', 'spots', selectedMapa, `${selectedElemento}.png`);
 
-    if (!fs.existsSync(filePath)) {
+    // Verificar si existe el archivo (usando fsSync porque no hay versión async de existsSync)
+    const fileExists = fsSync.existsSync(filePath);
+    if (!fileExists) {
         return interaction.update({
             content: `❌ No se encontró la imagen para ${selectedMapa} - ${selectedElemento}`,
             components: [],
@@ -64,18 +115,10 @@ async function handleSearch(interaction, selectedMapa, selectedElemento) {
 
     const row = new ActionRowBuilder().addComponents(volverButton);
 
-    // 📌 Diccionario de configuraciones especiales
-    const spotConfig = {
-        default: { main: 7, sub: 6 },
-        SOD: { main: 9, sub: 7 },
-        // 🔮 Podés agregar más mapas acá
-        // ARENA: { main: 8, sub: 5 },
-        // KANTURU: { main: 10, sub: 8 },
-    };
-
-    // 👇 Buscar configuración según el mapa (case-insensitive)
+    // Obtener configuración del mapa desde el caché/archivo
+    const config = await readSpotConfig();
     const mapaKey = selectedMapa.toUpperCase();
-    const { main, sub } = spotConfig[mapaKey] || spotConfig.default;
+    const { main = 7, sub = 6 } = config[mapaKey] || { main: 7, sub: 6 };
 
     const embed = new EmbedBuilder()
         .setColor(0x00FF7F)
@@ -98,11 +141,10 @@ async function handleSearch(interaction, selectedMapa, selectedElemento) {
     });
 }
 
-
 // ------------------ BOTÓN VOLVER ------------------
 async function handleBack(interaction) {
-    const dataPath = path.join(__dirname, '..', 'data', 'spots');
-    const mapas = fs.readdirSync(dataPath).filter(file => fs.lstatSync(path.join(dataPath, file)).isDirectory());
+    // Usar la función getMapas que ya es asíncrona
+    const mapas = await getMapas();
 
     const mapaSelect = new StringSelectMenuBuilder()
         .setCustomId('select_mapa')
@@ -135,15 +177,17 @@ async function handleBack(interaction) {
         .setDescription('Selecciona un mapa y un elemento, luego presiona **Buscar**.')
         .setFooter({ text: 'Powered by Chelo', iconURL: interaction.client.user.displayAvatarURL() });
 
-    // Aquí quitamos cualquier imagen previa
     await interaction.update({ embeds: [embed], components: [row1, row2, row3], files: [] });
 }
 
 // ------------------ SELECT MENUS ------------------
 function handleSelect(interaction) {
     let userData = spotSelections.get(interaction.user.id) || {};
+    userData.timestamp = Date.now(); // Agregar timestamp para TTL
+    
     if (interaction.customId === 'select_mapa') userData.mapa = interaction.values[0];
     if (interaction.customId === 'select_elemento') userData.elemento = interaction.values[0];
+    
     spotSelections.set(interaction.user.id, userData);
     interaction.deferUpdate();
 }
@@ -156,7 +200,6 @@ function getUserSelection(userId) {
 function clearUserSelection(userId) {
     spotSelections.delete(userId);
 }
-
 
 // ------------------ EXPORTS ------------------
 module.exports = {

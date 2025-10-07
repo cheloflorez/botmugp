@@ -1,5 +1,5 @@
 const calculator = require('../modules/calculator');
-const calculatorTime = require('../modules/calculatortime')
+const calculatorTime = require('../modules/calculatortime');
 
 module.exports = {
     async handleModal(interaction) {
