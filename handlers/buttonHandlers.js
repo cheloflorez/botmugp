@@ -5,7 +5,7 @@ const spots = require('../modules/spots');
 const mazeHelper = require('../modules/mazehelper');
 const tca = require('../modules/tca'); // nuevo
 const gap = require('../modules/gap'); // nuevo
-const { logInteraction } = require('../modules/logs');
+
 
 const modules = [calculator, spots, mazeHelper];
 
@@ -16,27 +16,21 @@ module.exports = {
         // Botones principales
         const primaryButtons = {
             open_levelcalc: async () => {
-                logInteraction(interaction.user, 'Calculadora de Nivel');
                 await calculator.execute(interaction);
             },
             open_timecalc: async () => {
-                logInteraction(interaction.user, 'Calculadora de Tiempo');
                 await calculatorTime.execute(interaction);
             },
             open_spots: async () => {
-                logInteraction(interaction.user, 'Buscador Spots');
                 await spots.handleInteraction(interaction);
             },
             open_mazehelper: async () => {
-                logInteraction(interaction.user, 'Maze Helper');
                 await mazeHelper.handleInteraction(interaction);
             },
             open_tca: async () => {
-                logInteraction(interaction.user, 'Info TCA');
                 await tca.handleInteraction(interaction);
             },
             open_gap: async () => {
-                logInteraction(interaction.user, 'Info GAP');
                 await gap.handleInteraction(interaction);
             },
             buscar_spot: async () => {

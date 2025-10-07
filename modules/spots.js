@@ -4,7 +4,6 @@ const path = require('path');
 
 const spotSelections = new Map(); // key: userId, value: { mapa, elemento }
 
-<<<<<<< HEAD
 // ------------------ MENÚ INICIAL ------------------
 async function handleInteraction(interaction) {
     const dataPath = path.join(__dirname, '..', 'data', 'spots');
@@ -12,28 +11,6 @@ async function handleInteraction(interaction) {
 
     if (mapas.length === 0) return interaction.reply({ content: '❌ No hay mapas disponibles.', flags: MessageFlags.Ephemeral });
 
-=======
-// Leer configuración
-const configPath = path.join(__dirname, '..', 'data', 'spots', 'spotsConfig.json');
-function readSpotConfig() {
-    if (!fs.existsSync(configPath)) return {};
-    const raw = fs.readFileSync(configPath, 'utf8');
-    return JSON.parse(raw);
-}
-
-// Obtener nombres de mapas
-function getMapas() {
-    const config = readSpotConfig();
-    return Object.keys(config); // ["SOD", "ARENA", "KANTURU"]
-}
-
-// ------------------ MENÚ INICIAL ------------------
-async function handleInteraction(interaction) {
-    const mapas = getMapas();
-    if (mapas.length === 0) {
-        return interaction.reply({ content: '❌ No hay mapas configurados.', flags: 64 });
-    }
->>>>>>> fca0e5e8a30619c65371730de35066af4eda9186
     const mapaSelect = new StringSelectMenuBuilder()
         .setCustomId('select_mapa')
         .setPlaceholder('Selecciona un mapa')
@@ -88,7 +65,6 @@ async function handleSearch(interaction, selectedMapa, selectedElemento) {
     const row = new ActionRowBuilder().addComponents(volverButton);
 
     // 📌 Diccionario de configuraciones especiales
-<<<<<<< HEAD
     const spotConfig = {
         default: { main: 7, sub: 6 },
         SOD: { main: 9, sub: 7 },
@@ -100,21 +76,6 @@ async function handleSearch(interaction, selectedMapa, selectedElemento) {
     // 👇 Buscar configuración según el mapa (case-insensitive)
     const mapaKey = selectedMapa.toUpperCase();
     const { main, sub } = spotConfig[mapaKey] || spotConfig.default;
-=======
-    function spotConfig(mapa) {
-        const filePath = path.join(__dirname, '..', 'data', 'spots', 'spotsConfig.json');
-        let config = {};
-
-        if (fs.existsSync(filePath)) {
-            config = JSON.parse(fs.readFileSync(filePath, 'utf8'));
-        }
-
-        return config[mapa.toUpperCase()] || { main: 7, sub: 6 }; // valores por defecto
-    }
-
-    // 👇 Buscar configuración según el mapa (case-insensitive)
-    const { main, sub } = spotConfig(selectedMapa);
->>>>>>> fca0e5e8a30619c65371730de35066af4eda9186
 
     const embed = new EmbedBuilder()
         .setColor(0x00FF7F)
@@ -140,12 +101,8 @@ async function handleSearch(interaction, selectedMapa, selectedElemento) {
 
 // ------------------ BOTÓN VOLVER ------------------
 async function handleBack(interaction) {
-<<<<<<< HEAD
     const dataPath = path.join(__dirname, '..', 'data', 'spots');
     const mapas = fs.readdirSync(dataPath).filter(file => fs.lstatSync(path.join(dataPath, file)).isDirectory());
-=======
-    const mapas = getMapas();
->>>>>>> fca0e5e8a30619c65371730de35066af4eda9186
 
     const mapaSelect = new StringSelectMenuBuilder()
         .setCustomId('select_mapa')

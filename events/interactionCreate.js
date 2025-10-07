@@ -2,7 +2,6 @@ const { Events , MessageFlags } = require('discord.js');
 const buttonHandlers = require('../handlers/buttonHandlers');
 const selectHandlers = require('../handlers/selectHandlers');
 const modalHandlers = require('../handlers/modalHandlers');
-const logsCommand = require('../commands/logs'); // tu comando /logs
 
 module.exports = {
     name: Events.InteractionCreate,
