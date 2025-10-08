@@ -1,0 +1,356 @@
+2025-10-07 16:16:59 [INFO]: Loading commands...
+2025-10-07 16:16:59 [INFO]: Loading 1 command(s)...
+2025-10-07 16:16:59 [INFO]: Loaded command: /stats {"file":"stats.js"}
+2025-10-07 16:16:59 [INFO]: Commands loaded: 1 successful, 0 failed
+2025-10-07 16:16:59 [INFO]: Starting bot... {"env":"ENV","nodeVersion":"v22.18.0"}
+2025-10-07 16:16:59 [INFO]: Bot started successfully
+2025-10-07 16:19:40 [INFO]: Received SIGINT, starting graceful shutdown...
+2025-10-07 16:19:40 [INFO]: Stopping health check server...
+2025-10-07 16:19:40 [INFO]: Logging final metrics...
+2025-10-07 16:19:40 [INFO]: === METRICS REPORT === {"uptime":"2 minutes","interactions":{"total":0,"buttons":0,"modals":0,"selects":0,"commands":0},"modules":{"calculator":0,"calculatorTime":0,"spots":0,"mazeHelper":0,"gap":0,"tca":0},"images":{"generated":0,"avgTime":0,"errors":0},"errors":0,"rateLimits":0,"memory":{"current":{"timestamp":1759864769079,"heapUsed":18,"heapTotal":21,"rss":79,"external":4},"avg":18,"max":18,"min":18}}
+2025-10-07 16:19:40 [INFO]: Destroying Discord client...
+2025-10-07 16:19:42 [INFO]: Graceful shutdown completed
+2025-10-07 16:19:45 [INFO]: Loading commands...
+2025-10-07 16:19:45 [INFO]: Loading 1 command(s)...
+2025-10-07 16:19:45 [INFO]: Loaded command: /stats {"file":"stats.js"}
+2025-10-07 16:19:45 [INFO]: Commands loaded: 1 successful, 0 failed
+2025-10-07 16:19:45 [INFO]: Starting bot... {"env":"ENV","nodeVersion":"v22.18.0"}
+2025-10-07 16:19:46 [INFO]: Bot started successfully
+2025-10-07 16:20:56 [INFO]: Received SIGINT, starting graceful shutdown...
+2025-10-07 16:20:56 [INFO]: Stopping health check server...
+2025-10-07 16:20:56 [INFO]: Logging final metrics...
+2025-10-07 16:20:56 [INFO]: === METRICS REPORT === {"uptime":"1 minutes","interactions":{"total":0,"buttons":0,"modals":0,"selects":0,"commands":0},"modules":{"calculator":0,"calculatorTime":0,"spots":0,"mazeHelper":0,"gap":0,"tca":0},"images":{"generated":0,"avgTime":0,"errors":0},"errors":0,"rateLimits":0,"memory":{"current":{"timestamp":1759864845657,"heapUsed":18,"heapTotal":21,"rss":79,"external":4},"avg":18,"max":18,"min":18}}
+2025-10-07 16:20:56 [INFO]: Destroying Discord client...
+2025-10-07 16:20:58 [INFO]: Graceful shutdown completed
+2025-10-07 16:21:52 [INFO]: Loading commands...
+2025-10-07 16:21:52 [INFO]: Loading 1 command(s)...
+2025-10-07 16:21:52 [INFO]: Loaded command: /stats {"file":"stats.js"}
+2025-10-07 16:21:52 [INFO]: Commands loaded: 1 successful, 0 failed
+2025-10-07 16:21:52 [INFO]: Starting bot... {"env":"ENV","nodeVersion":"v22.18.0"}
+2025-10-07 16:21:53 [INFO]: Bot started successfully
+2025-10-07 16:22:50 [INFO]: Received SIGINT, starting graceful shutdown...
+2025-10-07 16:22:50 [INFO]: Stopping health check server...
+2025-10-07 16:22:50 [INFO]: Logging final metrics...
+2025-10-07 16:22:50 [INFO]: === METRICS REPORT === {"uptime":"0 minutes","interactions":{"total":0,"buttons":0,"modals":0,"selects":0,"commands":0},"modules":{"calculator":0,"calculatorTime":0,"spots":0,"mazeHelper":0,"gap":0,"tca":0},"images":{"generated":0,"avgTime":0,"errors":0},"errors":0,"rateLimits":0,"memory":{"current":{"timestamp":1759864942801,"heapUsed":18,"heapTotal":22,"rss":83,"external":4},"avg":18,"max":18,"min":18}}
+2025-10-07 16:22:50 [INFO]: Destroying Discord client...
+2025-10-07 16:22:52 [INFO]: Graceful shutdown completed
+2025-10-07 16:38:41 [INFO]: Starting bot... {"env":"DEVELOPER","nodeVersion":"v22.18.0"}
+2025-10-07 16:38:41 [ERROR]: Failed to start bot {"error":"Cannot read properties of undefined (reading 'port')"}
+TypeError: Cannot read properties of undefined (reading 'port')
+    at HealthCheckServer.start (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\utils\healthCheck.js:28:47)
+    at start (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\index.js:98:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-10-07 16:42:35 [INFO]: Starting bot... {"env":"DEVELOPER","nodeVersion":"v22.18.0"}
+2025-10-07 16:42:36 [INFO]: Bot started successfully
+2025-10-07 16:42:36 [INFO]: Health check server running on port 3000
+2025-10-07 16:45:46 [INFO]: Received SIGINT, starting graceful shutdown...
+2025-10-07 16:45:46 [INFO]: Stopping health check server...
+2025-10-07 16:45:46 [INFO]: Health check server stopped
+2025-10-07 16:45:46 [INFO]: Logging final metrics...
+2025-10-07 16:45:46 [INFO]: === METRICS REPORT === {"uptime":"3 minutes","interactions":{"total":0,"buttons":0,"modals":0,"selects":0,"commands":0},"modules":{"calculator":0,"calculatorTime":0,"spots":0,"mazeHelper":0,"gap":0,"tca":0},"images":{"generated":0,"avgTime":0,"errors":0},"errors":0,"rateLimits":0,"memory":{"current":{"timestamp":1759866335991,"heapUsed":19,"heapTotal":21,"rss":79,"external":4},"avg":18,"max":19,"min":18}}
+2025-10-07 16:45:46 [INFO]: Destroying Discord client...
+2025-10-07 16:45:48 [INFO]: Graceful shutdown completed
+2025-10-07 16:45:50 [INFO]: Loading commands...
+2025-10-07 16:45:50 [INFO]: Loading 1 command(s)...
+2025-10-07 16:45:50 [INFO]: Loaded command: /stats {"file":"stats.js"}
+2025-10-07 16:45:50 [INFO]: Commands loaded: 1 successful, 0 failed
+2025-10-07 16:45:51 [INFO]: Starting bot... {"env":"DEVELOPER","nodeVersion":"v22.18.0"}
+2025-10-07 16:45:51 [INFO]: Bot started successfully
+2025-10-07 16:45:51 [INFO]: Health check server running on port 3000
+2025-10-07 16:48:43 [INFO]: Received SIGINT, starting graceful shutdown...
+2025-10-07 16:48:43 [INFO]: Stopping health check server...
+2025-10-07 16:48:43 [INFO]: Health check server stopped
+2025-10-07 16:48:43 [INFO]: Logging final metrics...
+2025-10-07 16:48:43 [INFO]: === METRICS REPORT === {"uptime":"2 minutes","interactions":{"total":0,"buttons":0,"modals":0,"selects":0,"commands":0},"modules":{"calculator":0,"calculatorTime":0,"spots":0,"mazeHelper":0,"gap":0,"tca":0},"images":{"generated":0,"avgTime":0,"errors":0},"errors":0,"rateLimits":0,"memory":{"current":{"timestamp":1759866500985,"heapUsed":18,"heapTotal":22,"rss":80,"external":4},"avg":18,"max":18,"min":18}}
+2025-10-07 16:48:43 [INFO]: Destroying Discord client...
+2025-10-07 16:48:45 [INFO]: Graceful shutdown completed
+2025-10-07 16:49:04 [INFO]: Loading commands...
+2025-10-07 16:49:04 [INFO]: Loading 1 command(s)...
+2025-10-07 16:49:04 [INFO]: Loaded command: /stats {"file":"stats.js"}
+2025-10-07 16:49:04 [INFO]: Commands loaded: 1 successful, 0 failed
+2025-10-07 16:49:04 [INFO]: Starting bot... {"env":"DEVELOPER","nodeVersion":"v22.18.0"}
+2025-10-07 16:49:05 [INFO]: Bot started successfully
+2025-10-07 16:49:05 [INFO]: Health check server running on port 3000
+2025-10-07 16:51:40 [INFO]: Received SIGINT, starting graceful shutdown...
+2025-10-07 16:51:40 [INFO]: Stopping health check server...
+2025-10-07 16:52:29 [INFO]: Received SIGINT, starting graceful shutdown...
+2025-10-07 16:52:29 [INFO]: Stopping health check server...
+2025-10-07 16:53:04 [INFO]: Received SIGINT, starting graceful shutdown...
+2025-10-07 16:53:04 [INFO]: Stopping health check server...
+2025-10-07 16:54:07 [INFO]: Loading commands...
+2025-10-07 16:54:07 [INFO]: Loading 1 command(s)...
+2025-10-07 16:54:07 [INFO]: Loaded command: /stats {"file":"stats.js"}
+2025-10-07 16:54:07 [INFO]: Commands loaded: 1 successful, 0 failed
+2025-10-07 16:54:07 [INFO]: Starting bot... {"env":"DEVELOPER","nodeVersion":"v22.18.0"}
+2025-10-07 16:54:08 [INFO]: Bot started successfully
+2025-10-07 16:54:08 [INFO]: Health check server running on port 3000
+2025-10-07 16:54:44 [ERROR]: Uncaught exception {"error":"Cannot read properties of undefined (reading 'metricsToken')"}
+TypeError: Cannot read properties of undefined (reading 'metricsToken')
+    at HealthCheckServer.handleSecureMetrics (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\utils\healthCheck.js:80:46)
+    at Server.<anonymous> (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\utils\healthCheck.js:41:22)
+    at Server.emit (node:events:518:28)
+    at parserOnIncoming (node:_http_server:1153:12)
+    at HTTPParser.parserOnHeadersComplete (node:_http_common:117:17)
+2025-10-07 16:54:44 [ERROR]: Error tracked: uncaught_exception {"error":"Cannot read properties of undefined (reading 'metricsToken')"}
+TypeError: Cannot read properties of undefined (reading 'metricsToken')
+    at HealthCheckServer.handleSecureMetrics (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\utils\healthCheck.js:80:46)
+    at Server.<anonymous> (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\utils\healthCheck.js:41:22)
+    at Server.emit (node:events:518:28)
+    at parserOnIncoming (node:_http_server:1153:12)
+    at HTTPParser.parserOnHeadersComplete (node:_http_common:117:17)
+2025-10-07 16:54:44 [INFO]: Received UNCAUGHT_EXCEPTION, starting graceful shutdown...
+2025-10-07 16:54:44 [INFO]: Stopping health check server...
+2025-10-07 16:58:50 [INFO]: Received SIGINT, starting graceful shutdown...
+2025-10-07 16:58:50 [INFO]: Stopping health check server...
+2025-10-07 16:58:56 [INFO]: Loading commands...
+2025-10-07 16:58:56 [INFO]: Loading 1 command(s)...
+2025-10-07 16:58:56 [INFO]: Loaded command: /stats {"file":"stats.js"}
+2025-10-07 16:58:56 [INFO]: Commands loaded: 1 successful, 0 failed
+2025-10-07 16:58:56 [INFO]: Starting bot... {"env":"DEVELOPER","nodeVersion":"v22.18.0"}
+2025-10-07 16:58:57 [INFO]: Bot started successfully
+2025-10-07 16:59:00 [INFO]: Received SIGINT, starting graceful shutdown...
+2025-10-07 16:59:00 [INFO]: Logging final metrics...
+2025-10-07 16:59:00 [INFO]: === METRICS REPORT === {"uptime":"0 minutes","interactions":{"total":0,"buttons":0,"modals":0,"selects":0,"commands":0},"modules":{"calculator":0,"calculatorTime":0,"spots":0,"mazeHelper":0,"gap":0,"tca":0},"images":{"generated":0,"avgTime":0,"errors":0},"errors":0,"rateLimits":0,"memory":null}
+2025-10-07 16:59:00 [INFO]: Destroying Discord client...
+2025-10-07 16:59:01 [INFO]: Graceful shutdown completed
+2025-10-07 20:37:54 [INFO]: Loading commands...
+2025-10-07 20:37:54 [INFO]: Loading 1 command(s)...
+2025-10-07 20:37:54 [INFO]: Loaded command: /stats {"file":"stats.js"}
+2025-10-07 20:37:54 [INFO]: Commands loaded: 1 successful, 0 failed
+2025-10-07 20:37:54 [INFO]: Starting bot... {"env":"DEVELOPER","nodeVersion":"v22.18.0"}
+2025-10-07 20:37:54 [INFO]: Bot started successfully
+2025-10-07 20:38:10 [INFO]: Received SIGINT, starting graceful shutdown...
+2025-10-07 20:38:10 [INFO]: Logging final metrics...
+2025-10-07 20:38:10 [INFO]: === METRICS REPORT === {"uptime":"0 minutes","interactions":{"total":0,"buttons":0,"modals":0,"selects":0,"commands":0},"modules":{"calculator":0,"calculatorTime":0,"spots":0,"mazeHelper":0,"gap":0,"tca":0},"images":{"generated":0,"avgTime":0,"errors":0},"errors":0,"rateLimits":0,"memory":null}
+2025-10-07 20:38:10 [INFO]: Destroying Discord client...
+2025-10-07 20:38:11 [INFO]: Graceful shutdown completed
+2025-10-07 20:43:05 [INFO]: Loading commands...
+2025-10-07 20:43:05 [INFO]: Loading 1 command(s)...
+2025-10-07 20:43:05 [INFO]: Loaded command: /stats {"file":"stats.js"}
+2025-10-07 20:43:05 [INFO]: Commands loaded: 1 successful, 0 failed
+2025-10-07 20:43:05 [INFO]: Starting bot... {"env":"DEVELOPER","nodeVersion":"v22.18.0"}
+2025-10-07 20:43:06 [INFO]: Bot started successfully
+2025-10-07 20:43:06 [ERROR]: Discord client error {"error":"botConfig is not defined"}
+ReferenceError: botConfig is not defined
+    at Object.execute (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\events\ready.js:10:34)
+    at Client.<anonymous> (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\index.js:26:52)
+    at Object.onceWrapper (node:events:633:26)
+    at Client.emit (node:events:518:28)
+    at WebSocketManager.triggerClientReady (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\node_modules\discord.js\src\client\websocket\WebSocketManager.js:401:17)
+    at WebSocketManager.checkShardsReady (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\node_modules\discord.js\src\client\websocket\WebSocketManager.js:368:10)
+    at WebSocketShard.<anonymous> (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\node_modules\discord.js\src\client\websocket\WebSocketManager.js:198:16)
+    at WebSocketShard.emit (node:events:518:28)
+    at WebSocketShard.checkReady (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\node_modules\discord.js\src\client\websocket\WebSocketShard.js:184:12)
+    at WebSocketShard.gotGuild (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\node_modules\discord.js\src\client\websocket\WebSocketShard.js:158:10)
+2025-10-07 20:43:06 [ERROR]: Error tracked: client_error {"error":"botConfig is not defined"}
+ReferenceError: botConfig is not defined
+    at Object.execute (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\events\ready.js:10:34)
+    at Client.<anonymous> (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\index.js:26:52)
+    at Object.onceWrapper (node:events:633:26)
+    at Client.emit (node:events:518:28)
+    at WebSocketManager.triggerClientReady (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\node_modules\discord.js\src\client\websocket\WebSocketManager.js:401:17)
+    at WebSocketManager.checkShardsReady (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\node_modules\discord.js\src\client\websocket\WebSocketManager.js:368:10)
+    at WebSocketShard.<anonymous> (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\node_modules\discord.js\src\client\websocket\WebSocketManager.js:198:16)
+    at WebSocketShard.emit (node:events:518:28)
+    at WebSocketShard.checkReady (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\node_modules\discord.js\src\client\websocket\WebSocketShard.js:184:12)
+    at WebSocketShard.gotGuild (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\node_modules\discord.js\src\client\websocket\WebSocketShard.js:158:10)
+2025-10-07 20:43:38 [INFO]: Received SIGINT, starting graceful shutdown...
+2025-10-07 20:43:38 [INFO]: Logging final metrics...
+2025-10-07 20:43:38 [INFO]: === METRICS REPORT === {"uptime":"0 minutes","interactions":{"total":0,"buttons":0,"modals":0,"selects":0,"commands":0},"modules":{"calculator":0,"calculatorTime":0,"spots":0,"mazeHelper":0,"gap":0,"tca":0},"images":{"generated":0,"avgTime":0,"errors":0},"errors":1,"rateLimits":0,"memory":{"current":{"timestamp":1759880615535,"heapUsed":18,"heapTotal":21,"rss":83,"external":4},"avg":18,"max":18,"min":18}}
+2025-10-07 20:43:38 [INFO]: Destroying Discord client...
+2025-10-07 20:43:39 [INFO]: Graceful shutdown completed
+2025-10-07 20:43:41 [INFO]: Loading commands...
+2025-10-07 20:43:41 [INFO]: Loading 1 command(s)...
+2025-10-07 20:43:41 [INFO]: Loaded command: /stats {"file":"stats.js"}
+2025-10-07 20:43:41 [INFO]: Commands loaded: 1 successful, 0 failed
+2025-10-07 20:43:41 [INFO]: Starting bot... {"env":"DEVELOPER","nodeVersion":"v22.18.0"}
+2025-10-07 20:43:42 [INFO]: Bot started successfully
+2025-10-07 20:43:57 [INFO]: Received SIGINT, starting graceful shutdown...
+2025-10-07 20:43:57 [INFO]: Logging final metrics...
+2025-10-07 20:43:57 [INFO]: === METRICS REPORT === {"uptime":"0 minutes","interactions":{"total":0,"buttons":0,"modals":0,"selects":0,"commands":0},"modules":{"calculator":0,"calculatorTime":0,"spots":0,"mazeHelper":0,"gap":0,"tca":0},"images":{"generated":0,"avgTime":0,"errors":0},"errors":0,"rateLimits":0,"memory":null}
+2025-10-07 20:43:57 [INFO]: Destroying Discord client...
+2025-10-07 20:43:58 [INFO]: Graceful shutdown completed
+2025-10-07 20:46:34 [INFO]: Loading commands...
+2025-10-07 20:46:34 [INFO]: Loading 1 command(s)...
+2025-10-07 20:46:34 [INFO]: Loaded command: /stats {"file":"stats.js"}
+2025-10-07 20:46:34 [INFO]: Commands loaded: 1 successful, 0 failed
+2025-10-07 20:46:34 [INFO]: Starting bot... {"env":"DEVELOPER","nodeVersion":"v22.18.0"}
+2025-10-07 20:46:35 [INFO]: Bot started successfully
+2025-10-07 20:46:35 [ERROR]: Discord client error {"error":"HealthChecker is not defined"}
+ReferenceError: HealthChecker is not defined
+    at Object.execute (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\events\ready.js:16:31)
+    at Client.<anonymous> (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\index.js:26:52)
+    at Object.onceWrapper (node:events:633:26)
+    at Client.emit (node:events:518:28)
+    at WebSocketManager.triggerClientReady (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\node_modules\discord.js\src\client\websocket\WebSocketManager.js:401:17)
+    at WebSocketManager.checkShardsReady (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\node_modules\discord.js\src\client\websocket\WebSocketManager.js:368:10)
+    at WebSocketShard.<anonymous> (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\node_modules\discord.js\src\client\websocket\WebSocketManager.js:198:16)
+    at WebSocketShard.emit (node:events:518:28)
+    at WebSocketShard.checkReady (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\node_modules\discord.js\src\client\websocket\WebSocketShard.js:184:12)
+    at WebSocketShard.gotGuild (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\node_modules\discord.js\src\client\websocket\WebSocketShard.js:158:10)
+2025-10-07 20:46:35 [ERROR]: Error tracked: client_error {"error":"HealthChecker is not defined"}
+ReferenceError: HealthChecker is not defined
+    at Object.execute (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\events\ready.js:16:31)
+    at Client.<anonymous> (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\index.js:26:52)
+    at Object.onceWrapper (node:events:633:26)
+    at Client.emit (node:events:518:28)
+    at WebSocketManager.triggerClientReady (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\node_modules\discord.js\src\client\websocket\WebSocketManager.js:401:17)
+    at WebSocketManager.checkShardsReady (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\node_modules\discord.js\src\client\websocket\WebSocketManager.js:368:10)
+    at WebSocketShard.<anonymous> (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\node_modules\discord.js\src\client\websocket\WebSocketManager.js:198:16)
+    at WebSocketShard.emit (node:events:518:28)
+    at WebSocketShard.checkReady (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\node_modules\discord.js\src\client\websocket\WebSocketShard.js:184:12)
+    at WebSocketShard.gotGuild (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\node_modules\discord.js\src\client\websocket\WebSocketShard.js:158:10)
+2025-10-07 20:47:22 [INFO]: Received SIGINT, starting graceful shutdown...
+2025-10-07 20:47:22 [INFO]: Logging final metrics...
+2025-10-07 20:47:22 [INFO]: === METRICS REPORT === {"uptime":"0 minutes","interactions":{"total":0,"buttons":0,"modals":0,"selects":0,"commands":0},"modules":{"calculator":0,"calculatorTime":0,"spots":0,"mazeHelper":0,"gap":0,"tca":0},"images":{"generated":0,"avgTime":0,"errors":0},"errors":1,"rateLimits":0,"memory":{"current":{"timestamp":1759880824437,"heapUsed":18,"heapTotal":21,"rss":83,"external":4},"avg":18,"max":18,"min":18}}
+2025-10-07 20:47:22 [INFO]: Destroying Discord client...
+2025-10-07 20:47:23 [INFO]: Graceful shutdown completed
+2025-10-07 20:47:26 [INFO]: Loading commands...
+2025-10-07 20:47:26 [INFO]: Loading 1 command(s)...
+2025-10-07 20:47:26 [INFO]: Loaded command: /stats {"file":"stats.js"}
+2025-10-07 20:47:26 [INFO]: Commands loaded: 1 successful, 0 failed
+2025-10-07 20:47:26 [INFO]: Starting bot... {"env":"DEVELOPER","nodeVersion":"v22.18.0"}
+2025-10-07 20:47:27 [INFO]: Bot started successfully
+2025-10-07 20:52:26 [INFO]: === METRICS REPORT === {"uptime":"5 minutes","interactions":{"total":0,"buttons":0,"modals":0,"selects":0,"commands":0},"modules":{"calculator":0,"calculatorTime":0,"spots":0,"mazeHelper":0,"gap":0,"tca":0},"images":{"generated":0,"avgTime":0,"errors":0},"errors":0,"rateLimits":0,"memory":{"current":{"timestamp":1759881116465,"heapUsed":19,"heapTotal":23,"rss":82,"external":4},"avg":18,"max":19,"min":18}}
+2025-10-07 20:54:48 [INFO]: Received SIGINT, starting graceful shutdown...
+2025-10-07 20:54:48 [INFO]: Logging final metrics...
+2025-10-07 20:54:48 [INFO]: === METRICS REPORT === {"uptime":"7 minutes","interactions":{"total":0,"buttons":0,"modals":0,"selects":0,"commands":0},"modules":{"calculator":0,"calculatorTime":0,"spots":0,"mazeHelper":0,"gap":0,"tca":0},"images":{"generated":0,"avgTime":0,"errors":0},"errors":0,"rateLimits":0,"memory":{"current":{"timestamp":1759881266504,"heapUsed":19,"heapTotal":23,"rss":82,"external":4},"avg":19,"max":19,"min":18}}
+2025-10-07 20:54:48 [INFO]: Destroying Discord client...
+2025-10-07 20:54:49 [INFO]: Graceful shutdown completed
+2025-10-07 20:59:01 [INFO]: Loading commands...
+2025-10-07 20:59:01 [INFO]: Loading 1 command(s)...
+2025-10-07 20:59:01 [INFO]: Loaded command: /stats {"file":"stats.js"}
+2025-10-07 20:59:01 [INFO]: Commands loaded: 1 successful, 0 failed
+2025-10-07 20:59:01 [INFO]: Starting bot... {"env":"development","nodeVersion":"v22.18.0"}
+2025-10-07 20:59:02 [INFO]: Bot started successfully
+2025-10-07 20:59:43 [INFO]: MazeHelper opened {"userId":"659591356305637389"}
+2025-10-07 20:59:44 [ERROR]: Error tracked: handle_direction {"error":"Cannot read properties of undefined (reading 'misses')"}
+TypeError: Cannot read properties of undefined (reading 'misses')
+    at MetricsCollector.increment (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\utils\metrics.js:53:40)
+    at loadCollage (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\modules\mazehelper.js:89:13)
+    at Object.handleDirection (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\modules\mazehelper.js:132:22)
+    at Object.handleButton (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\handlers\buttonHandlers.js:95:30)
+    at Object.execute (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\events\interactionCreate.js:13:38)
+    at Client.<anonymous> (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\index.js:28:50)
+    at Client.emit (node:events:518:28)
+    at InteractionCreateAction.handle (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\node_modules\discord.js\src\client\actions\InteractionCreate.js:101:12)
+    at module.exports [as INTERACTION_CREATE] (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\node_modules\discord.js\src\client\websocket\handlers\INTERACTION_CREATE.js:4:36)
+    at WebSocketManager.handlePacket (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\node_modules\discord.js\src\client\websocket\WebSocketManager.js:352:31)
+2025-10-07 20:59:44 [ERROR]: Error in handleDirection {"error":"Cannot read properties of undefined (reading 'misses')"}
+TypeError: Cannot read properties of undefined (reading 'misses')
+    at MetricsCollector.increment (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\utils\metrics.js:53:40)
+    at loadCollage (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\modules\mazehelper.js:89:13)
+    at Object.handleDirection (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\modules\mazehelper.js:132:22)
+    at Object.handleButton (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\handlers\buttonHandlers.js:95:30)
+    at Object.execute (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\events\interactionCreate.js:13:38)
+    at Client.<anonymous> (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\index.js:28:50)
+    at Client.emit (node:events:518:28)
+    at InteractionCreateAction.handle (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\node_modules\discord.js\src\client\actions\InteractionCreate.js:101:12)
+    at module.exports [as INTERACTION_CREATE] (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\node_modules\discord.js\src\client\websocket\handlers\INTERACTION_CREATE.js:4:36)
+    at WebSocketManager.handlePacket (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\node_modules\discord.js\src\client\websocket\WebSocketManager.js:352:31)
+2025-10-07 21:01:16 [INFO]: MazeHelper opened {"userId":"659591356305637389"}
+2025-10-07 21:01:17 [ERROR]: Error tracked: handle_direction {"error":"Cannot read properties of undefined (reading 'hits')"}
+TypeError: Cannot read properties of undefined (reading 'hits')
+    at MetricsCollector.increment (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\utils\metrics.js:53:40)
+    at loadCollage (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\modules\mazehelper.js:76:17)
+    at Object.handleDirection (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\modules\mazehelper.js:132:22)
+    at Object.handleButton (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\handlers\buttonHandlers.js:95:30)
+    at Object.execute (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\events\interactionCreate.js:13:38)
+    at Client.<anonymous> (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\index.js:28:50)
+    at Client.emit (node:events:518:28)
+    at InteractionCreateAction.handle (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\node_modules\discord.js\src\client\actions\InteractionCreate.js:101:12)
+    at module.exports [as INTERACTION_CREATE] (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\node_modules\discord.js\src\client\websocket\handlers\INTERACTION_CREATE.js:4:36)
+    at WebSocketManager.handlePacket (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\node_modules\discord.js\src\client\websocket\WebSocketManager.js:352:31)
+2025-10-07 21:01:17 [ERROR]: Error in handleDirection {"error":"Cannot read properties of undefined (reading 'hits')"}
+TypeError: Cannot read properties of undefined (reading 'hits')
+    at MetricsCollector.increment (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\utils\metrics.js:53:40)
+    at loadCollage (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\modules\mazehelper.js:76:17)
+    at Object.handleDirection (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\modules\mazehelper.js:132:22)
+    at Object.handleButton (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\handlers\buttonHandlers.js:95:30)
+    at Object.execute (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\events\interactionCreate.js:13:38)
+    at Client.<anonymous> (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\index.js:28:50)
+    at Client.emit (node:events:518:28)
+    at InteractionCreateAction.handle (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\node_modules\discord.js\src\client\actions\InteractionCreate.js:101:12)
+    at module.exports [as INTERACTION_CREATE] (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\node_modules\discord.js\src\client\websocket\handlers\INTERACTION_CREATE.js:4:36)
+    at WebSocketManager.handlePacket (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\node_modules\discord.js\src\client\websocket\WebSocketManager.js:352:31)
+2025-10-07 21:01:21 [INFO]: Received SIGINT, starting graceful shutdown...
+2025-10-07 21:01:21 [INFO]: Logging final metrics...
+2025-10-07 21:01:21 [INFO]: === METRICS REPORT === {"uptime":"2 minutes","interactions":{"total":2,"buttons":2,"modals":0,"selects":0,"commands":0},"modules":{"calculator":0,"calculatorTime":0,"spots":0,"mazeHelper":2,"gap":0,"tca":0},"images":{"generated":0,"avgTime":0,"errors":0},"errors":2,"rateLimits":0,"memory":{"current":{"timestamp":1759881661892,"heapUsed":19,"heapTotal":22,"rss":66,"external":4},"avg":19,"max":19,"min":18}}
+2025-10-07 21:01:21 [INFO]: Destroying Discord client...
+2025-10-07 21:01:22 [INFO]: Graceful shutdown completed
+2025-10-07 21:01:25 [INFO]: Loading commands...
+2025-10-07 21:01:25 [INFO]: Loading 1 command(s)...
+2025-10-07 21:01:25 [INFO]: Loaded command: /stats {"file":"stats.js"}
+2025-10-07 21:01:25 [INFO]: Commands loaded: 1 successful, 0 failed
+2025-10-07 21:01:25 [INFO]: Starting bot... {"env":"development","nodeVersion":"v22.18.0"}
+2025-10-07 21:01:26 [INFO]: Bot started successfully
+2025-10-07 21:01:30 [INFO]: MazeHelper opened {"userId":"659591356305637389"}
+2025-10-07 21:01:31 [ERROR]: Error tracked: handle_direction {"error":"Cannot read properties of undefined (reading 'misses')"}
+TypeError: Cannot read properties of undefined (reading 'misses')
+    at MetricsCollector.increment (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\utils\metrics.js:53:40)
+    at loadCollage (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\modules\mazehelper.js:89:13)
+    at Object.handleDirection (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\modules\mazehelper.js:132:22)
+    at Object.handleButton (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\handlers\buttonHandlers.js:95:30)
+    at Object.execute (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\events\interactionCreate.js:13:38)
+    at Client.<anonymous> (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\index.js:28:50)
+    at Client.emit (node:events:518:28)
+    at InteractionCreateAction.handle (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\node_modules\discord.js\src\client\actions\InteractionCreate.js:101:12)
+    at module.exports [as INTERACTION_CREATE] (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\node_modules\discord.js\src\client\websocket\handlers\INTERACTION_CREATE.js:4:36)
+    at WebSocketManager.handlePacket (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\node_modules\discord.js\src\client\websocket\WebSocketManager.js:352:31)
+2025-10-07 21:01:31 [ERROR]: Error in handleDirection {"error":"Cannot read properties of undefined (reading 'misses')"}
+TypeError: Cannot read properties of undefined (reading 'misses')
+    at MetricsCollector.increment (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\utils\metrics.js:53:40)
+    at loadCollage (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\modules\mazehelper.js:89:13)
+    at Object.handleDirection (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\modules\mazehelper.js:132:22)
+    at Object.handleButton (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\handlers\buttonHandlers.js:95:30)
+    at Object.execute (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\events\interactionCreate.js:13:38)
+    at Client.<anonymous> (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\index.js:28:50)
+    at Client.emit (node:events:518:28)
+    at InteractionCreateAction.handle (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\node_modules\discord.js\src\client\actions\InteractionCreate.js:101:12)
+    at module.exports [as INTERACTION_CREATE] (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\node_modules\discord.js\src\client\websocket\handlers\INTERACTION_CREATE.js:4:36)
+    at WebSocketManager.handlePacket (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\node_modules\discord.js\src\client\websocket\WebSocketManager.js:352:31)
+2025-10-07 21:02:43 [INFO]: MazeHelper opened {"userId":"659591356305637389"}
+2025-10-07 21:02:44 [ERROR]: Error tracked: handle_direction {"error":"Cannot read properties of undefined (reading 'hits')"}
+TypeError: Cannot read properties of undefined (reading 'hits')
+    at MetricsCollector.increment (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\utils\metrics.js:53:40)
+    at loadCollage (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\modules\mazehelper.js:76:17)
+    at Object.handleDirection (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\modules\mazehelper.js:132:22)
+    at Object.handleButton (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\handlers\buttonHandlers.js:95:30)
+    at Object.execute (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\events\interactionCreate.js:13:38)
+    at Client.<anonymous> (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\index.js:28:50)
+    at Client.emit (node:events:518:28)
+    at InteractionCreateAction.handle (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\node_modules\discord.js\src\client\actions\InteractionCreate.js:101:12)
+    at module.exports [as INTERACTION_CREATE] (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\node_modules\discord.js\src\client\websocket\handlers\INTERACTION_CREATE.js:4:36)
+    at WebSocketManager.handlePacket (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\node_modules\discord.js\src\client\websocket\WebSocketManager.js:352:31)
+2025-10-07 21:02:44 [ERROR]: Error in handleDirection {"error":"Cannot read properties of undefined (reading 'hits')"}
+TypeError: Cannot read properties of undefined (reading 'hits')
+    at MetricsCollector.increment (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\utils\metrics.js:53:40)
+    at loadCollage (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\modules\mazehelper.js:76:17)
+    at Object.handleDirection (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\modules\mazehelper.js:132:22)
+    at Object.handleButton (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\handlers\buttonHandlers.js:95:30)
+    at Object.execute (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\events\interactionCreate.js:13:38)
+    at Client.<anonymous> (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\index.js:28:50)
+    at Client.emit (node:events:518:28)
+    at InteractionCreateAction.handle (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\node_modules\discord.js\src\client\actions\InteractionCreate.js:101:12)
+    at module.exports [as INTERACTION_CREATE] (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\node_modules\discord.js\src\client\websocket\handlers\INTERACTION_CREATE.js:4:36)
+    at WebSocketManager.handlePacket (C:\Users\chelo\Desktop\BOT MU GP\Ultimo BOT\node_modules\discord.js\src\client\websocket\WebSocketManager.js:352:31)
+2025-10-07 21:05:42 [INFO]: Received SIGINT, starting graceful shutdown...
+2025-10-07 21:05:42 [INFO]: Logging final metrics...
+2025-10-07 21:05:42 [INFO]: === METRICS REPORT === {"uptime":"4 minutes","interactions":{"total":2,"buttons":2,"modals":0,"selects":0,"commands":0},"modules":{"calculator":0,"calculatorTime":0,"spots":0,"mazeHelper":2,"gap":0,"tca":0},"images":{"generated":0,"avgTime":0,"errors":0},"errors":2,"rateLimits":0,"memory":{"current":{"timestamp":1759881925879,"heapUsed":19,"heapTotal":21,"rss":63,"external":4},"avg":19,"max":19,"min":18}}
+2025-10-07 21:05:42 [INFO]: Destroying Discord client...
+2025-10-07 21:05:43 [INFO]: Graceful shutdown completed
+2025-10-07 21:05:53 [INFO]: Loading commands...
+2025-10-07 21:05:53 [INFO]: Loading 1 command(s)...
+2025-10-07 21:05:53 [INFO]: Loaded command: /stats {"file":"stats.js"}
+2025-10-07 21:05:53 [INFO]: Commands loaded: 1 successful, 0 failed
+2025-10-07 21:05:53 [INFO]: Starting bot... {"env":"development","nodeVersion":"v22.18.0"}
+2025-10-07 21:05:53 [INFO]: Bot started successfully
+2025-10-07 21:05:59 [INFO]: MazeHelper opened {"userId":"659591356305637389"}
+2025-10-07 21:06:01 [INFO]: Direction loaded {"userId":"659591356305637389","direction":"up","duration":"685ms"}
+2025-10-07 21:06:03 [INFO]: Image loaded {"userId":"659591356305637389","direction":"up","idx":"1","duration":"663ms"}
+2025-10-07 21:06:08 [INFO]: Image loaded {"userId":"659591356305637389","direction":"up","idx":"2","duration":"498ms"}
+2025-10-07 21:08:03 [INFO]: Received SIGINT, starting graceful shutdown...
+2025-10-07 21:08:03 [INFO]: Logging final metrics...
+2025-10-07 21:08:03 [INFO]: === METRICS REPORT === {"uptime":"2 minutes","interactions":{"total":1,"buttons":1,"modals":0,"selects":0,"commands":0},"modules":{"calculator":0,"calculatorTime":0,"spots":0,"mazeHelper":1,"gap":0,"tca":0},"images":{"generated":0,"avgTime":0,"errors":0},"errors":0,"rateLimits":0,"memory":{"current":{"timestamp":1759882073096,"heapUsed":19,"heapTotal":23,"rss":65,"external":4},"avg":19,"max":19,"min":19}}
+2025-10-07 21:08:03 [INFO]: Destroying Discord client...
+2025-10-07 21:08:04 [INFO]: Graceful shutdown completed

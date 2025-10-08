@@ -6,6 +6,7 @@ const mazeHelper = require('../modules/mazehelper');
 const tca = require('../modules/tca');
 const gap = require('../modules/gap');
 const rateLimiter = require('../utils/rateLimiter');
+const metrics = require('../utils/metrics');
 
 module.exports = {
     async handleButton(interaction) {
@@ -57,9 +58,11 @@ module.exports = {
                 await calculatorTime.execute(interaction);
             },
             open_spots: async () => {
+                metrics.trackInteraction('buttons', 'spots');
                 await spots.handleInteraction(interaction);
             },
             open_mazehelper: async () => {
+                metrics.trackInteraction('buttons', 'mazeHelper');
                 await mazeHelper.handleInteraction(interaction);
             },
             open_tca: async () => {

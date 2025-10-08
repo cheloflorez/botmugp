@@ -1,8 +1,8 @@
 const { EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require('discord.js');
-const { helpChannelId } = require('../config.json');
+const  config  = require('../configs/config');
 
 async function sendHomeMenu(client) {
-    const channel = await client.channels.fetch(helpChannelId);
+    const channel = await client.channels.fetch(config.discord.helpChannelId);
     if (!channel) {
         console.log('❌ No se encontró el canal del menú');
         return;

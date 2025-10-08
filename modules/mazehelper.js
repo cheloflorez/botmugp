@@ -1,11 +1,10 @@
 const { EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, AttachmentBuilder, MessageFlags } = require('discord.js');
-const { createCanvas, loadImage } = require('canvas');
-const fs = require('fs'); // Para funciones síncronas
-const fsPromises = require('fs').promises; // Para funciones asíncronas
+const fs = require('fs');
 const path = require('path');
-const { makeFinalImage } = require('../utils/makeFinalImage');
+const log = require('../utils/logger');
+const metrics = require('../utils/metrics');
 
-// Config de direcciones y cantidad de imágenes
+// Config de direcciones
 const mazeConfig = {
     up: 4,
     down: 9,
@@ -13,32 +12,19 @@ const mazeConfig = {
     right: 10
 };
 
-// Cache de imágenes cargadas
-const imageCache = new Map();
-const CACHE_TTL = 5 * 60 * 1000; // 5 minutos
+// Cache simple de archivos leídos (opcional, pero ayuda)
+const fileCache = new Map();
+const CACHE_TTL = 10 * 60 * 1000; // 10 minutos
 
-// Limpiar caché automáticamente
+// Limpiar caché
 setInterval(() => {
     const now = Date.now();
-    for (const [key, value] of imageCache.entries()) {
+    for (const [key, value] of fileCache.entries()) {
         if (now - value.timestamp > CACHE_TTL) {
-            imageCache.delete(key);
+            fileCache.delete(key);
         }
     }
 }, CACHE_TTL);
-
-// Función para cargar imagen con caché
-async function getCachedImage(imagePath) {
-    const cached = imageCache.get(imagePath);
-    if (cached && (Date.now() - cached.timestamp) < CACHE_TTL) {
-        return cached.image;
-    }
-    
-    const image = await loadImage(imagePath);
-    imageCache.set(imagePath, { image, timestamp: Date.now() });
-    
-    return image;
-}
 
 // ------------------ BOTONES ------------------
 function makeDirectionRow() {
@@ -74,53 +60,53 @@ function makeNumberRow(direction) {
     return new ActionRowBuilder().addComponents(buttons);
 }
 
-// ------------------ COLLAGE ------------------
-async function makeCollage(direction) {
-    const count = mazeConfig[direction];
-    if (!count) return null;
-
-    // Usar getCachedImage en lugar de loadImage directamente
-    const imgs = await Promise.all(
-        Array.from({ length: count }).map((_, idx) =>
-            getCachedImage(`./data/mazehelper/${direction}/${idx + 1}.png`)
-        )
-    );
-
-    const width = imgs[0].width;
-    const height = imgs[0].height;
-    const gap = 10;
-    const cols = 2;
-    const rows = Math.ceil(count / cols);
-
-    const canvas = createCanvas(cols * width + (cols + 1) * gap, rows * height + (rows + 1) * gap);
-    const ctx = canvas.getContext('2d');
-
-    ctx.fillStyle = '#1e1e2f';
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-    ctx.font = 'bold 28px Sans';
-    ctx.fillStyle = 'white';
-    ctx.strokeStyle = 'black';
-    ctx.lineWidth = 3;
-
-    imgs.forEach((img, idx) => {
-        const row = Math.floor(idx / cols);
-        const col = idx % cols;
-        const x = gap + col * (width + gap);
-        const y = gap + row * (height + gap);
-
-        ctx.drawImage(img, x, y, width, height);
-
-        const num = `${idx + 1}`;
-        ctx.strokeText(num, x + 10, y + 30);
-        ctx.fillText(num, x + 10, y + 30);
+// ------------------ CARGAR IMAGEN (SIN CANVAS) ------------------
+function loadCollage(direction) {
+    const filePath = path.join(__dirname, '..', 'data', 'mazehelper', `${direction}_collage.png`);
+    
+    // Verificar si existe
+    if (!fs.existsSync(filePath)) {
+        log.warn(`Collage not found: ${filePath}`);
+        return null;
+    }
+    
+    // Usar caché si está disponible
+    const cached = fileCache.get(filePath);
+    if (cached && (Date.now() - cached.timestamp) < CACHE_TTL) {
+        return cached.attachment;
+    }
+    
+    // Crear attachment
+    const attachment = new AttachmentBuilder(filePath, { name: 'collage.png' });
+    
+    // Guardar en caché
+    fileCache.set(filePath, {
+        attachment,
+        timestamp: Date.now()
     });
+    
+    return attachment;
+}
 
-    return new AttachmentBuilder(canvas.toBuffer(), { name: 'collage.png' });
+function loadFinalImage(direction, idx) {
+    const filePathA = path.join(__dirname, '..', 'data', 'mazehelper', `${direction}_${idx}_final.png`);
+    
+    if (!fs.existsSync(filePathA)) {
+        log.warn(`Final image not found: ${filePathA}`);
+        return null;
+    }
+    
+    return new AttachmentBuilder(filePathA, { name: 'final.png' });
+}
+
+function hasMultiplePaths(direction, idx) {
+    const filePathB = path.join(__dirname, '..', 'data', 'mazehelper', `${direction}_${idx}_final_B.png`);
+    return fs.existsSync(filePathB);
 }
 
 // ------------------ HANDLERS ------------------
 async function handleInteraction(interaction) {
+    
     const embed = new EmbedBuilder()
         .setColor(0x2ecc71)
         .setTitle('🌀 Maze of Dimensions Helper')
@@ -132,45 +118,103 @@ async function handleInteraction(interaction) {
         components: [makeDirectionRow()],
         flags: MessageFlags.Ephemeral
     });
+    
+    log.info('MazeHelper opened', { userId: interaction.user.id });
 }
 
 async function handleDirection(interaction, direction) {
-    const file = await makeCollage(direction);
-    if (!file) return interaction.reply({ content: '⚠️ No se encontraron imágenes para esta dirección.', flags: MessageFlags.Ephemeral });
+    const startTime = Date.now();
+    
+    try {
+        const file = loadCollage(direction);
+        
+        if (!file) {
+            return interaction.update({ 
+                content: '⚠️ No se encontró el collage para esta dirección.', 
+                components: [],
+                embeds: []
+            });
+        }
 
-    const embed = new EmbedBuilder()
-        .setColor(0x3498db)
-        .setTitle(`📂 ${direction.toUpperCase()} - Selecciona una imagen`)
-        .setImage('attachment://collage.png');
+        const embed = new EmbedBuilder()
+            .setColor(0x3498db)
+            .setTitle(`📂 ${direction.toUpperCase()} - Selecciona una imagen`)
+            .setImage('attachment://collage.png');
 
-    await interaction.update({
-        embeds: [embed],
-        files: [file],
-        components: [makeNumberRow(direction), makeBackRow()]
-    });
+        await interaction.update({
+            embeds: [embed],
+            files: [file],
+            components: [makeNumberRow(direction), makeBackRow()]
+        });
+        
+        const duration = Date.now() - startTime;
+        log.info('Direction loaded', { 
+            userId: interaction.user.id, 
+            direction,
+            duration: `${duration}ms`
+        });
+        
+        
+    } catch (error) {
+        log.error('Error in handleDirection', error);
+        
+        return interaction.update({ 
+            content: '❌ Error al cargar el collage.', 
+            components: [],
+            embeds: []
+        });
+    }
 }
 
 async function handleImage(interaction, direction, idx) {
-    const finalFile = await makeFinalImage(direction, idx);
-    if (!finalFile) return interaction.reply({ content: '⚠️ No se encontró la imagen final.', flags: MessageFlags.Ephemeral });
+    const startTime = Date.now();
+    
+    try {
+        const finalFile = loadFinalImage(direction, idx);
+        
+        if (!finalFile) {
+            return interaction.update({ 
+                content: '⚠️ No se encontró la imagen final.', 
+                components: [],
+                embeds: []
+            });
+        }
 
-    const secondPath = `./data/mazehelper/${direction}/${idx}finalB.png`;
-    // Usar fs.existsSync (no fsPromises)
-    const description = fs.existsSync(secondPath)
-        ? '⚠️ Hay 2 opciones de caminos, elige una.'
-        : 'Camino seleccionado';
+        const hasMultiple = hasMultiplePaths(direction, idx);
+        const description = hasMultiple
+            ? '⚠️ Hay 2 opciones de caminos, elige una.'
+            : 'Camino seleccionado';
 
-    const embed = new EmbedBuilder()
-        .setColor(0xe67e22)
-        .setTitle(`🖼 Imagen ${idx} (${direction.toUpperCase()})`)
-        .setDescription(description)
-        .setImage('attachment://final.png');
+        const embed = new EmbedBuilder()
+            .setColor(0xe67e22)
+            .setTitle(`🖼 Imagen ${idx} (${direction.toUpperCase()})`)
+            .setDescription(description)
+            .setImage('attachment://final.png');
 
-    await interaction.update({
-        embeds: [embed],
-        files: [finalFile],
-        components: [makeBackSubRow(direction)]
-    });
+        await interaction.update({
+            embeds: [embed],
+            files: [finalFile],
+            components: [makeBackSubRow(direction)]
+        });
+        
+        const duration = Date.now() - startTime;
+        log.info('Image loaded', { 
+            userId: interaction.user.id, 
+            direction, 
+            idx,
+            duration: `${duration}ms`
+        });
+        
+        
+    } catch (error) {
+        log.error('Error in handleImage', error);
+        
+        return interaction.update({ 
+            content: '❌ Error al cargar la imagen.', 
+            components: [],
+            embeds: []
+        });
+    }
 }
 
 async function handleBack(interaction) {
@@ -180,23 +224,45 @@ async function handleBack(interaction) {
         .setDescription('Elige una dirección para comenzar')
         .setFooter({ text: 'Powered by Chelo', iconURL: interaction.client.user.displayAvatarURL() });
 
-    await interaction.update({ embeds: [embed], components: [makeDirectionRow()], files: [] });
+    await interaction.update({ 
+        embeds: [embed], 
+        components: [makeDirectionRow()], 
+        files: [] 
+    });
 }
 
 async function handleBackSub(interaction, direction) {
-    const file = await makeCollage(direction);
-    if (!file) return interaction.reply({ content: '⚠️ No se encontraron imágenes.', flags: MessageFlags.Ephemeral });
+    try {
+        const file = loadCollage(direction);
+        
+        if (!file) {
+            return interaction.update({ 
+                content: '⚠️ No se encontró el collage.', 
+                components: [],
+                embeds: []
+            });
+        }
 
-    const embed = new EmbedBuilder()
-        .setColor(0x3498db)
-        .setTitle(`📂 ${direction.toUpperCase()} - Selecciona una imagen`)
-        .setImage('attachment://collage.png');
+        const embed = new EmbedBuilder()
+            .setColor(0x3498db)
+            .setTitle(`📂 ${direction.toUpperCase()} - Selecciona una imagen`)
+            .setImage('attachment://collage.png');
 
-    await interaction.update({
-        embeds: [embed],
-        files: [file],
-        components: [makeNumberRow(direction), makeBackRow()]
-    });
+        await interaction.update({
+            embeds: [embed],
+            files: [file],
+            components: [makeNumberRow(direction), makeBackRow()]
+        });
+        
+    } catch (error) {
+        log.error('Error in handleBackSub', error);
+        
+        return interaction.update({ 
+            content: '❌ Error al volver.', 
+            components: [],
+            embeds: []
+        });
+    }
 }
 
 // ------------------ EXPORTS ------------------
