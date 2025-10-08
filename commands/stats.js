@@ -243,7 +243,7 @@ module.exports = {
             console.error('Error in stats command:', error);
             await interaction.editReply({
                 content: '❌ Error al obtener las estadísticas.',
-                flags: MessageFlags.Ephemeral
+                flags: MessageFlags.Ephemera
             });
         }
     }
